@@ -4,9 +4,7 @@ class ContextBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: Container(
-        color: Colors.blue,
-      ),
+      child: Container(),
     );
   }
 }

@@ -15,6 +15,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: kBackgroundScaffoldColor,
       body: Container(
+        decoration: BoxDecoration(gradient: kBackgroundScaffoldGradient),
         height: double.infinity,
         width: double.infinity,
         padding: EdgeInsets.all(40),
