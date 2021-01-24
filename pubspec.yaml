@@ -22,6 +22,8 @@ environment:
 
 dependencies:
   provider: ^4.3.3
+  flutter_mobx: ^1.1.0+2
+  mobx: ^1.2.1+4
   flutter:
     sdk: flutter
 
@@ -32,6 +34,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  build_runner:
+  mobx_codegen: ^1.1.2
   integration_test:
     sdk: flutter
 

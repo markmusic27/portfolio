@@ -1,4 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:portfolio/core/services/services.core.dart';
+import 'package:portfolio/core/state/state.core.dart';
 
-class Core {}
+class Core {
+  State state = State();
+  Services services = Services();
+}
