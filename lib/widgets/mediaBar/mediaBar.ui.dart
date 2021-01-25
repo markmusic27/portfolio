@@ -13,7 +13,7 @@ class MediaBar extends StatelessWidget {
             mediaSource: MediaSource.twitter,
           ),
           AnimatableIcon(
-            mediaSource: MediaSource.github,
+            mediaSource: MediaSource.gitHub,
           ),
           AnimatableIcon(
             mediaSource: MediaSource.linkedIn,

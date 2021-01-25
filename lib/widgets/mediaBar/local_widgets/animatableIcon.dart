@@ -1,16 +1,17 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
-import 'package:portfolio/utils/constants.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:portfolio/core/core.dart';
 import 'package:portfolio/widgets/email/email.icon.dart';
 import 'package:portfolio/widgets/gitHub/gitHub.icon.dart';
 import 'package:portfolio/widgets/instagram/instagram.icon.dart';
 import 'package:portfolio/widgets/linkedIn/linkedIn.icon.dart';
 import 'package:portfolio/widgets/spotify/spotify.icon.dart';
 import 'package:portfolio/widgets/twitter/twitter.icon.dart';
+import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 enum MediaSource {
-  github,
+  gitHub,
   twitter,
   linkedIn,
   instagram,
@@ -27,13 +28,19 @@ class AnimatableIcon extends StatefulWidget {
   _AnimatableIconState createState() => _AnimatableIconState();
 }
 
-class _AnimatableIconState extends State<AnimatableIcon> {
+class _AnimatableIconState extends State<AnimatableIcon>
+    with TickerProviderStateMixin {
+  AnimationController controller;
+  Core core;
+
+  void animate() {}
+
   IconData filter() {
     switch (widget.mediaSource) {
       case MediaSource.email:
         return Email.mail_alt;
         break;
-      case MediaSource.github:
+      case MediaSource.gitHub:
         return GitHub.github_circled;
         break;
       case MediaSource.instagram:
@@ -55,13 +62,35 @@ class _AnimatableIconState extends State<AnimatableIcon> {
   }
 
   @override
+  void initState() {
+    core = Provider.of<Core>(context, listen: false);
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(right: 17),
-      child: Icon(
-        filter(),
-        size: 25,
-        color: Color(0xffFFFDFD).withOpacity(0.5),
+    return GestureDetector(
+      onTap: () async {
+        final data = await core.services.serializeJSON.readJson();
+        String link = data[
+                "${core.services.serializeJSON.parseMediaSourceEnum(widget.mediaSource)}"]
+            ["link"];
+        launch(link);
+      },
+      child: Observer(
+        builder: (_) => MouseRegion(
+          child: Container(
+            margin: EdgeInsets.only(
+              right: 17,
+              bottom: core.state.gitHubHoverStore.spacing,
+            ),
+            child: Icon(
+              filter(),
+              size: 25,
+              color: Color(0xffFFFDFD).withOpacity(0.5),
+            ),
+          ),
+        ),
       ),
     );
   }
