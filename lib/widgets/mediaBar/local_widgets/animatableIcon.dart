@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:portfolio/core/core.dart';
+import 'package:portfolio/utils/constants.dart';
 import 'package:portfolio/widgets/email/email.icon.dart';
 import 'package:portfolio/widgets/gitHub/gitHub.icon.dart';
 import 'package:portfolio/widgets/instagram/instagram.icon.dart';
@@ -32,10 +33,24 @@ class _AnimatableIconState extends State<AnimatableIcon>
     with TickerProviderStateMixin {
   AnimationController controller;
   Core core;
-  List<double> possibleState;
+  List<dynamic> possibleState;
   int index;
 
-  void animate() {}
+  void animate() {
+    controller = AnimationController(
+      lowerBound: kSpacingLowerBound,
+      value: possibleState[index].onHover ? kSpacingUpperBound : null,
+      upperBound: kSpacingUpperBound,
+      duration: Duration(milliseconds: 100),
+      vsync: this,
+    );
+
+    possibleState[index].onHover ? controller.reverse() : controller.forward();
+
+    controller.addListener(() {
+      possibleState[index].changeSpacing(controller.value);
+    });
+  }
 
   IconData filter() {
     switch (widget.mediaSource) {
@@ -72,6 +87,7 @@ class _AnimatableIconState extends State<AnimatableIcon>
   @override
   void initState() {
     core = Provider.of<Core>(context, listen: false);
+    filter();
     super.initState();
   }
 
@@ -83,24 +99,31 @@ class _AnimatableIconState extends State<AnimatableIcon>
         String link = data[
                 "${core.services.serializeJSON.parseMediaSourceEnum(widget.mediaSource)}"]
             ["link"];
-        print(link);
         launch(link);
       },
       child: Observer(
         builder: (_) {
           possibleState = [
-            core.state.twitterHoverStore.spacing,
-            core.state.gitHubHoverStore.spacing,
-            core.state.linkedInHoverStore.spacing,
-            core.state.instagramHoverStore.spacing,
-            core.state.spotifyHoverStore.spacing,
-            core.state.emailHoverStore.spacing,
+            core.state.twitterHoverStore,
+            core.state.gitHubHoverStore,
+            core.state.linkedInHoverStore,
+            core.state.instagramHoverStore,
+            core.state.spotifyHoverStore,
+            core.state.emailHoverStore,
           ];
           return MouseRegion(
+            onEnter: (_) {
+              animate();
+              possibleState[index].reverseProp();
+            },
+            onExit: (_) {
+              animate();
+              possibleState[index].reverseProp();
+            },
             child: Container(
               margin: EdgeInsets.only(
-                right: 17,
-                bottom: possibleState[0],
+                right: 20,
+                bottom: possibleState[index].spacing,
               ),
               child: Icon(
                 filter(),

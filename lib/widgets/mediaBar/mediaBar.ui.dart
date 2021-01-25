@@ -8,6 +8,8 @@ class MediaBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           AnimatableIcon(
             mediaSource: MediaSource.twitter,

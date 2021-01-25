@@ -22,3 +22,5 @@ const kHeader1Style = TextStyle(
 );
 
 // ICONS
+const kSpacingLowerBound = 0.0;
+const kSpacingUpperBound = 5.0;
