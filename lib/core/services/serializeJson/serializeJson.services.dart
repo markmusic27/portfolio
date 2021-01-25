@@ -14,7 +14,6 @@ class SerializeJSON {
   }
 
   String parseMediaSourceEnum(MediaSource mediaSource) {
-    print(mediaSource);
     String source = "";
 
     for (int i = 0; i < mediaSource.toString().length; i++) {

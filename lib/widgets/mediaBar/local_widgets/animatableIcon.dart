@@ -75,6 +75,7 @@ class _AnimatableIconState extends State<AnimatableIcon>
         String link = data[
                 "${core.services.serializeJSON.parseMediaSourceEnum(widget.mediaSource)}"]
             ["link"];
+        print(link);
         launch(link);
       },
       child: Observer(
