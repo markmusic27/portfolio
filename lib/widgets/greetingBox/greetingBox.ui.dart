@@ -15,7 +15,7 @@ class GreetingBox extends StatelessWidget {
         children: [
           BackgroundMultiGradient(),
           Container(
-            padding: EdgeInsets.all(25),
+            padding: EdgeInsets.all(30),
             width: double.infinity,
             decoration: BoxDecoration(
               image: DecorationImage(

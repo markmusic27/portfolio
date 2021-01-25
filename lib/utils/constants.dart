@@ -20,3 +20,5 @@ const kHeader1Style = TextStyle(
   fontSize: 50,
   fontFamily: "Inter_SemiBold",
 );
+
+// ICONS
