@@ -95,3 +95,21 @@ flutter:
     - family: Inter_Black
       fonts:
         - asset: assets/fonts/black.ttf
+    - family: Email
+      fonts:
+        - asset: assets/icons/Email.ttf
+    - family: GitHub
+      fonts:
+        - asset: assets/icons/GitHub.ttf
+    - family: Instagram
+      fonts:
+        - asset: assets/icons/Instagram.ttf
+    - family: LinkedIn
+      fonts:
+        - asset: assets/icons/LinkedIn.ttf
+    - family: Spotify
+      fonts:
+        - asset: assets/icons/Spotify.ttf
+    - family: Twitter
+      fonts:
+        - asset: assets/icons/Twitter.ttf

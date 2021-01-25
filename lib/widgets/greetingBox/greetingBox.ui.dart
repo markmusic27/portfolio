@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/core/core.dart';
 import 'package:portfolio/widgets/backgroundMultiGradient/backgroundMultiGradient.ui.dart';
 import 'package:portfolio/widgets/headerWithSubheader/headerWithSubheader.ui.dart';
+import 'package:portfolio/widgets/mediaBar/mediaBar.ui.dart';
 import 'package:portfolio/widgets/profilePicture/profilePicture.ui.dart';
 import 'package:provider/provider.dart';
 
@@ -29,7 +30,7 @@ class GreetingBox extends StatelessWidget {
               children: [
                 ProfilePicture(),
                 HeaderWithSubheader(),
-                Container(height: 100, width: 100, color: Colors.blue),
+                MediaBar(),
               ],
             ),
           ),

@@ -9,14 +9,14 @@ class HeaderWithSubheader extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          SelectableText(
             "Hi I'm Mark",
             style: kHeader1Style.copyWith(
               color: Color(0xffD5E1FC).withOpacity(0.9),
             ),
           ),
           SizedBox(height: 3),
-          Text(
+          SelectableText(
             "Full-Stack Engineer & Entrepreneur",
             style: kHeader1Style.copyWith(
               color: Color(0xffD5E1FC).withOpacity(0.8),
