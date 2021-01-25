@@ -10,3 +10,6 @@ const kBackgroundScaffoldGradient = LinearGradient(
     Colors.black,
   ],
 );
+
+const kProfilePictureUpperBound = 53.0;
+const kProfilePictureLowerBound = 50.0;

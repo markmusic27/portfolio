@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 class GenerateGradientImage {
   ImageProvider generate() {
     int randInt = Random().nextInt(14);
-    return AssetImage("gradients/${randInt == 0 ? 1 : randInt}.png");
+    return AssetImage(
+        "gradients/${12}.png"); // TODO: Change to random versioning
   }
 }
