@@ -32,27 +32,35 @@ class _AnimatableIconState extends State<AnimatableIcon>
     with TickerProviderStateMixin {
   AnimationController controller;
   Core core;
+  List<double> possibleState;
+  int index;
 
   void animate() {}
 
   IconData filter() {
     switch (widget.mediaSource) {
       case MediaSource.email:
+        index = 5;
         return Email.mail_alt;
         break;
       case MediaSource.gitHub:
+        index = 1;
         return GitHub.github_circled;
         break;
       case MediaSource.instagram:
+        index = 3;
         return Instagram.instagram;
         break;
       case MediaSource.linkedIn:
+        index = 2;
         return LinkedIn.linkedin;
         break;
       case MediaSource.spotify:
+        index = 4;
         return Spotify.spotify;
         break;
       case MediaSource.twitter:
+        index = 0;
         return Twitter.twitter;
         break;
       default:
@@ -79,19 +87,29 @@ class _AnimatableIconState extends State<AnimatableIcon>
         launch(link);
       },
       child: Observer(
-        builder: (_) => MouseRegion(
-          child: Container(
-            margin: EdgeInsets.only(
-              right: 17,
-              bottom: core.state.gitHubHoverStore.spacing,
+        builder: (_) {
+          possibleState = [
+            core.state.twitterHoverStore.spacing,
+            core.state.gitHubHoverStore.spacing,
+            core.state.linkedInHoverStore.spacing,
+            core.state.instagramHoverStore.spacing,
+            core.state.spotifyHoverStore.spacing,
+            core.state.emailHoverStore.spacing,
+          ];
+          return MouseRegion(
+            child: Container(
+              margin: EdgeInsets.only(
+                right: 17,
+                bottom: possibleState[0],
+              ),
+              child: Icon(
+                filter(),
+                size: 25,
+                color: Color(0xffFFFDFD).withOpacity(0.5),
+              ),
             ),
-            child: Icon(
-              filter(),
-              size: 25,
-              color: Color(0xffFFFDFD).withOpacity(0.5),
-            ),
-          ),
-        ),
+          );
+        },
       ),
     );
   }
