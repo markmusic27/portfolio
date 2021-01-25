@@ -24,13 +24,21 @@ class GreetingBox extends StatelessWidget {
               ),
               borderRadius: BorderRadius.circular(30),
             ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
+            child: Stack(
               children: [
-                ProfilePicture(),
-                HeaderWithSubheader(),
-                MediaBar(),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    ProfilePicture(),
+                    HeaderWithSubheader(),
+                    Container(),
+                  ],
+                ),
+                Align(
+                  alignment: Alignment.bottomLeft,
+                  child: MediaBar(),
+                ),
               ],
             ),
           ),
