@@ -54,10 +54,12 @@ class _ProfilePictureState extends State<ProfilePicture>
       child: Observer(
         builder: (_) => MouseRegion(
           onEnter: (_) {
-            animate(false);
+            animate(core.state.profileHoverStore.onHover);
+            core.state.profileHoverStore.reverseProp();
           },
           onExit: (_) {
-            animate(true);
+            animate(core.state.profileHoverStore.onHover);
+            core.state.profileHoverStore.reverseProp();
           },
           child: Container(
             height: core.state.profileHoverStore.size,
