@@ -95,7 +95,8 @@ class _AnimatableIconState extends State<AnimatableIcon>
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () async {
-        final data = await core.services.serializeJSON.readJson();
+        final data =
+            await core.services.serializeJSON.readJson("json/mediaData.json");
         String link = data[
                 "${core.services.serializeJSON.parseMediaSourceEnum(widget.mediaSource)}"]
             ["link"];
