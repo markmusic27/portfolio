@@ -10,14 +10,14 @@ class HeaderWithSubheader extends StatelessWidget {
         children: [
           SelectableText(
             "Hi I'm Mark",
-            style: kHeader1Style.copyWith(
+            style: kSiteHeader.copyWith(
               color: Color(0xffD5E1FC).withOpacity(0.9),
             ),
           ),
           SizedBox(height: 3),
           SelectableText(
             "Full-Stack Engineer & Entrepreneur",
-            style: kHeader1Style.copyWith(
+            style: kSiteHeader.copyWith(
               color: Color(0xffD5E1FC).withOpacity(0.8),
               fontSize: 25,
             ),

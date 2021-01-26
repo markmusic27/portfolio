@@ -55,6 +55,7 @@ flutter:
     - assets/logos/
     - assets/gradients/
     - assets/images/
+    - assets/emojis/
     - assets/json/mediaData.json
     - assets/json/content.json
 

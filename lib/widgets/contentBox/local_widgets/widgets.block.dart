@@ -5,8 +5,6 @@ class Widgets extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(bottom: 40),
-      height: 300,
-      color: Colors.orange,
     );
   }
 }

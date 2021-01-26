@@ -41,7 +41,7 @@ class _AnimatableIconState extends State<AnimatableIcon>
       lowerBound: kSpacingLowerBound,
       value: possibleState[index].onHover ? kSpacingUpperBound : null,
       upperBound: kSpacingUpperBound,
-      duration: Duration(milliseconds: 100),
+      duration: Duration(milliseconds: 75),
       vsync: this,
     );
 
