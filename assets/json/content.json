@@ -10,13 +10,13 @@
             {
                 "title": "Safe Labs",
                 "description": "A powerful tool for personal and community safety.",
-                "imageAssetURL": "assets/logos/safe.png",
+                "imageAssetPath": "assets/logos/safe.png",
                 "url": "https://safelabs.app"
             },
             {
                 "title": "Zyndicate Labs",
                 "description": "The all-in-one platform to organize your life.",
-                "imageAssetURL": "assets/logos/zyndicate.png",
+                "imageAssetPath": "assets/logos/zyndicate.png",
                 "url": "https://zyndicate.app"
             }
         ]

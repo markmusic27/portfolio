@@ -52,6 +52,7 @@ class _CompaniesState extends State<Companies> {
               core.state.companiesBlockStore.context,
               style: kBody,
             ),
+            SizedBox(height: 15),
             CompanyColumn(
               companyList: core.state.companiesBlockStore.companyList,
             )
