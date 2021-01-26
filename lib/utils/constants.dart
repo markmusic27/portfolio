@@ -37,3 +37,7 @@ const kBody = TextStyle(
 // ICONS
 const kSpacingLowerBound = 0.0;
 const kSpacingUpperBound = 5.0;
+
+// Icon Margin
+const kMarginUpperBound = 2.0;
+const kMarginLowerBound = 0.0;

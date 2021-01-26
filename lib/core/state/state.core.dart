@@ -1,4 +1,4 @@
-import 'package:portfolio/core/state/companiesBlock.store.dart/companiesBlock.store.dart';
+import 'package:portfolio/core/state/companiesBlock/companiesBlock.store.dart';
 import 'package:portfolio/core/state/emailHover/emailHover.store.dart';
 import 'package:portfolio/core/state/githubHover/gitHubHover.store.dart';
 import 'package:portfolio/core/state/iconHover/iconHover.store.dart';
@@ -6,8 +6,10 @@ import 'package:portfolio/core/state/instagramHover/instagramHover.store.dart';
 import 'package:portfolio/core/state/linkedInHover/linkedInHover.store.dart';
 import 'package:portfolio/core/state/myStoryBlock/myStoryBlock.store.dart';
 import 'package:portfolio/core/state/profileHover/profileHover.store.dart';
+import 'package:portfolio/core/state/safeCompany/safeCompany.store.dart';
 import 'package:portfolio/core/state/spotifyHover/spotifyHover.store.dart';
 import 'package:portfolio/core/state/twitterHover/twitterHover.store.dart';
+import 'package:portfolio/core/state/zyndicateCompany/zyndicateCompany.store.dart';
 
 class State {
   // Profile Picture
@@ -22,7 +24,11 @@ class State {
   SpotifyHoverStore spotifyHoverStore = SpotifyHoverStore();
   TwitterHoverStore twitterHoverStore = TwitterHoverStore();
 
-  //Content Blocks
+  // Content Blocks
   MyStoryBlockStore myStoryBlockStore = MyStoryBlockStore();
   CompaniesBlockStore companiesBlockStore = CompaniesBlockStore();
+
+  // Company Hovers
+  ZyndicateCompanyStore zyndicateCompanyStore = ZyndicateCompanyStore();
+  SafeCompanyStore safeCompanyStore = SafeCompanyStore();
 }
