@@ -18,11 +18,9 @@ class _HomePageState extends State<HomePage> {
         decoration: BoxDecoration(gradient: kBackgroundScaffoldGradient),
         height: double.infinity,
         width: double.infinity,
-        padding: EdgeInsets.all(40),
         child: Row(
           children: [
             GreetingBox(),
-            SizedBox(width: 80),
             ContextBox(),
           ],
         ),

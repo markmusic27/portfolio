@@ -11,38 +11,41 @@ class GreetingBox extends StatelessWidget {
   Widget build(BuildContext context) {
     final Core core = Provider.of<Core>(context, listen: false);
     return Expanded(
-      child: Stack(
-        children: [
-          BackgroundMultiGradient(),
-          Container(
-            padding: EdgeInsets.all(30),
-            width: double.infinity,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: core.services.generateGradientImage.generate(),
-                fit: BoxFit.cover,
+      child: Padding(
+        padding: EdgeInsets.all(40),
+        child: Stack(
+          children: [
+            BackgroundMultiGradient(),
+            Container(
+              padding: EdgeInsets.all(30),
+              width: double.infinity,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: core.services.generateGradientImage.generate(),
+                  fit: BoxFit.cover,
+                ),
+                borderRadius: BorderRadius.circular(30),
               ),
-              borderRadius: BorderRadius.circular(30),
+              child: Stack(
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      ProfilePicture(),
+                      HeaderWithSubheader(),
+                      Container(),
+                    ],
+                  ),
+                  Align(
+                    alignment: Alignment.bottomLeft,
+                    child: MediaBar(),
+                  ),
+                ],
+              ),
             ),
-            child: Stack(
-              children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    ProfilePicture(),
-                    HeaderWithSubheader(),
-                    Container(),
-                  ],
-                ),
-                Align(
-                  alignment: Alignment.bottomLeft,
-                  child: MediaBar(),
-                ),
-              ],
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
