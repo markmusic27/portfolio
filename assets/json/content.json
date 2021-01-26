@@ -1,0 +1,14 @@
+{
+    "myStory": {
+        "title": "📖 My Story",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed rhoncus massa. Proin sollicitudin malesuada enim in porta. Aliquam ultricies nulla ut libero faucibus, in ultricies arcu tincidunt. In et erat volutpat, aliquet orci ac, pellentesque massa. Proin rhoncus egestas tortor eget finibus. Ut condimentum ullamcorper tristique. Quisque.\nMaximus, nibh non molestie ornare, lacus mi semper sem, vel facilisis nunc lacus convallis eros. Curabitur ut elementum lorem. Pellentesque pulvinar neque sed enim pellentesque hendrerit. Donec tempor egestas velit, volutpat convallis eros imperdiet quis. Vivamus at fermentum lacus. Phasellus accumsan ipsum sit amet mi vestibulum, ut auctor arcu aliquet."
+    },
+    "companies": {},
+    "programming": {},
+    "projects": {},
+    "talksAndEvents": {},
+    "learning": {},
+    "blog": {},
+    "certificates": {},
+    "widgets": {}
+}

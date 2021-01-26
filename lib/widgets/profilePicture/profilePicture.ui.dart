@@ -28,7 +28,6 @@ class _ProfilePictureState extends State<ProfilePicture>
 
     controller.addListener(() {
       core.state.profileHoverStore.changeSize(controller.value);
-      print(core.state.profileHoverStore.size);
     });
   }
 
