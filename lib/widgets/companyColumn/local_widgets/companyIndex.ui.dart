@@ -93,7 +93,28 @@ class _CompanyIndexState extends State<CompanyIndex>
                   Expanded(
                     flex: 145,
                     child: Container(
-                      child: Column(),
+                      padding: EdgeInsets.only(left: 15),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            widget.company.title,
+                            style: TextStyle(
+                              fontFamily: "Inter_SemiBold",
+                              fontSize: 18,
+                              color: Colors.white,
+                            ),
+                          ),
+                          SizedBox(height: 1),
+                          Text(
+                            widget.company.description,
+                            style: TextStyle(
+                              fontFamily: "Inter_Regular",
+                              color: Color(0xffC1C1C1),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   )
                 ],
