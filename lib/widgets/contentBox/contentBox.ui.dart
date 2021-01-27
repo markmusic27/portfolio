@@ -26,6 +26,7 @@ class ContextBox extends StatelessWidget {
             Blog(),
             Certificates(),
             Widgets(),
+            SizedBox(height: 700) //TODO: This is solely for testing REMOVE THIS
           ],
         ),
       ),

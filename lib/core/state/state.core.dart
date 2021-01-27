@@ -6,8 +6,10 @@ import 'package:portfolio/core/state/instagramHover/instagramHover.store.dart';
 import 'package:portfolio/core/state/linkedInHover/linkedInHover.store.dart';
 import 'package:portfolio/core/state/myStoryBlock/myStoryBlock.store.dart';
 import 'package:portfolio/core/state/profileHover/profileHover.store.dart';
+import 'package:portfolio/core/state/programmingBlock/programmingBlock.store.dart';
 import 'package:portfolio/core/state/safeCompany/safeCompany.store.dart';
 import 'package:portfolio/core/state/spotifyHover/spotifyHover.store.dart';
+import 'package:portfolio/core/state/statsBox/statsBox.store.dart';
 import 'package:portfolio/core/state/twitterHover/twitterHover.store.dart';
 import 'package:portfolio/core/state/zyndicateCompany/zyndicateCompany.store.dart';
 
@@ -27,8 +29,12 @@ class State {
   // Content Blocks
   MyStoryBlockStore myStoryBlockStore = MyStoryBlockStore();
   CompaniesBlockStore companiesBlockStore = CompaniesBlockStore();
+  ProgrammingBlockStore programmingBlockStore = ProgrammingBlockStore();
 
   // Company Hovers
   ZyndicateCompanyStore zyndicateCompanyStore = ZyndicateCompanyStore();
   SafeCompanyStore safeCompanyStore = SafeCompanyStore();
+
+  //Programming Hovers
+  StatsBoxStore statsBoxStore = StatsBoxStore();
 }

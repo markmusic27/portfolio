@@ -21,7 +21,10 @@
             }
         ]
     },
-    "programming": {},
+    "programming": {
+        "title": "Programming",
+        "context": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed rhoncus massa. Proin sollicitudin malesuada enim in porta."
+    },
     "projects": {},
     "talksAndEvents": {},
     "learning": {},

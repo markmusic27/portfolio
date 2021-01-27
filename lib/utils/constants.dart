@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 
 const kBackgroundScaffoldColor = Colors.black;
 
+// Colors
+const kAccentColor = Color(0xff18A0FB);
+const kGreyAccentColor = Color(0xff444444);
+
 const kBackgroundScaffoldGradient = LinearGradient(
   begin: Alignment.topLeft,
   end: Alignment.bottomRight,
@@ -41,3 +45,5 @@ const kSpacingUpperBound = 5.0;
 // Icon Margin
 const kMarginUpperBound = 2.0;
 const kMarginLowerBound = 0.0;
+
+// Widgets
