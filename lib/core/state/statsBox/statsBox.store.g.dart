@@ -39,6 +39,21 @@ mixin _$StatsBoxStore on _StatsBoxStore, Store {
     });
   }
 
+  final _$gitHubStarsAtom = Atom(name: '_StatsBoxStore.gitHubStars');
+
+  @override
+  GitHubStars get gitHubStars {
+    _$gitHubStarsAtom.reportRead();
+    return super.gitHubStars;
+  }
+
+  @override
+  set gitHubStars(GitHubStars value) {
+    _$gitHubStarsAtom.reportWrite(value, super.gitHubStars, () {
+      super.gitHubStars = value;
+    });
+  }
+
   final _$_StatsBoxStoreActionController =
       ActionController(name: '_StatsBoxStore');
 
@@ -68,7 +83,8 @@ mixin _$StatsBoxStore on _StatsBoxStore, Store {
   String toString() {
     return '''
 onHover: ${onHover},
-accentColor: ${accentColor}
+accentColor: ${accentColor},
+gitHubStars: ${gitHubStars}
     ''';
   }
 }
