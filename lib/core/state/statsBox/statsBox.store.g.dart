@@ -39,6 +39,21 @@ mixin _$StatsBoxStore on _StatsBoxStore, Store {
     });
   }
 
+  final _$languageColorAtom = Atom(name: '_StatsBoxStore.languageColor');
+
+  @override
+  Color get languageColor {
+    _$languageColorAtom.reportRead();
+    return super.languageColor;
+  }
+
+  @override
+  set languageColor(Color value) {
+    _$languageColorAtom.reportWrite(value, super.languageColor, () {
+      super.languageColor = value;
+    });
+  }
+
   final _$gitHubStarsAtom = Atom(name: '_StatsBoxStore.gitHubStars');
 
   @override
@@ -80,10 +95,33 @@ mixin _$StatsBoxStore on _StatsBoxStore, Store {
   }
 
   @override
+  void changeLanguageColor(Color c) {
+    final _$actionInfo = _$_StatsBoxStoreActionController.startAction(
+        name: '_StatsBoxStore.changeLanguageColor');
+    try {
+      return super.changeLanguageColor(c);
+    } finally {
+      _$_StatsBoxStoreActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void changeGitHubStars(GitHubStars m) {
+    final _$actionInfo = _$_StatsBoxStoreActionController.startAction(
+        name: '_StatsBoxStore.changeGitHubStars');
+    try {
+      return super.changeGitHubStars(m);
+    } finally {
+      _$_StatsBoxStoreActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   String toString() {
     return '''
 onHover: ${onHover},
 accentColor: ${accentColor},
+languageColor: ${languageColor},
 gitHubStars: ${gitHubStars}
     ''';
   }

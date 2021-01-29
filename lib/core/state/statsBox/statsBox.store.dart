@@ -16,6 +16,9 @@ abstract class _StatsBoxStore with Store {
   Color accentColor = kGreyAccentColor;
 
   @observable
+  Color languageColor = Colors.grey;
+
+  @observable
   GitHubStars gitHubStars = GitHubStars(
     name: "fetching",
     description: "fetching",
@@ -28,4 +31,10 @@ abstract class _StatsBoxStore with Store {
 
   @action
   void changeAccentColor(Color c) => accentColor = c;
+
+  @action
+  void changeLanguageColor(Color c) => languageColor = c;
+
+  @action
+  void changeGitHubStars(GitHubStars m) => gitHubStars = m;
 }

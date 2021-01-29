@@ -10,7 +10,7 @@ class GitHubStars {
     return GitHubStars(
       name: json["name"],
       description: json["description"],
-      url: json["url"],
+      url: json["html_url"],
       language: json["language"],
     );
   }
