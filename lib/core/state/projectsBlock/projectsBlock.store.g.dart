@@ -58,11 +58,11 @@ mixin _$ProjectsBlockStore on _ProjectsBlockStore, Store {
       ActionController(name: '_ProjectsBlockStore');
 
   @override
-  void changeProjectList(List<Project> pL) {
+  void addProjectList(Project project) {
     final _$actionInfo = _$_ProjectsBlockStoreActionController.startAction(
-        name: '_ProjectsBlockStore.changeProjectList');
+        name: '_ProjectsBlockStore.addProjectList');
     try {
-      return super.changeProjectList(pL);
+      return super.addProjectList(project);
     } finally {
       _$_ProjectsBlockStoreActionController.endAction(_$actionInfo);
     }

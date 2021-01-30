@@ -17,7 +17,7 @@ abstract class _ProjectsBlockStore with Store {
   List<Project> projectList = [];
 
   @action
-  void changeProjectList(List<Project> pL) => projectList = pL;
+  void addProjectList(Project project) => projectList.add(project);
 
   @action
   void changeTitle(String v) => title = v;

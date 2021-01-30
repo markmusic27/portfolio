@@ -7,6 +7,7 @@ import 'package:portfolio/core/state/linkedInHover/linkedInHover.store.dart';
 import 'package:portfolio/core/state/myStoryBlock/myStoryBlock.store.dart';
 import 'package:portfolio/core/state/profileHover/profileHover.store.dart';
 import 'package:portfolio/core/state/programmingBlock/programmingBlock.store.dart';
+import 'package:portfolio/core/state/projectsBlock/projectsBlock.store.dart';
 import 'package:portfolio/core/state/safeCompany/safeCompany.store.dart';
 import 'package:portfolio/core/state/spotifyHover/spotifyHover.store.dart';
 import 'package:portfolio/core/state/statsBox/statsBox.store.dart';
@@ -30,6 +31,7 @@ class State {
   MyStoryBlockStore myStoryBlockStore = MyStoryBlockStore();
   CompaniesBlockStore companiesBlockStore = CompaniesBlockStore();
   ProgrammingBlockStore programmingBlockStore = ProgrammingBlockStore();
+  ProjectsBlockStore projectsBlockStore = ProjectsBlockStore();
 
   // Company Hovers
   ZyndicateCompanyStore zyndicateCompanyStore = ZyndicateCompanyStore();
