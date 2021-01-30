@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:portfolio/core/core.dart';
 import 'package:portfolio/models/project.dart';
+import 'package:portfolio/utils/constants.dart';
 import 'package:portfolio/widgets/headerWithIcon/headerWithIcon.ui.dart';
+import 'package:portfolio/widgets/projectDisplay/projectDisplay.ui.dart';
 import 'package:provider/provider.dart';
 
 class Projects extends StatefulWidget {
@@ -35,16 +38,26 @@ class _ProjectsState extends State<Projects> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Observer(
+      builder: (_) => Container(
         child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        HeaderWithIcon(
-          text: 'Projects',
-          emoji: Emoji.work,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            HeaderWithIcon(
+              text: core.state.projectsBlockStore.title,
+              emoji: Emoji.work,
+            ),
+            SizedBox(height: 10),
+            SelectableText(
+              core.state.projectsBlockStore.context,
+              style: kBody,
+            ),
+            SizedBox(height: 10),
+            ProjectDisplay(),
+          ],
         ),
-      ],
-    ));
+      ),
+    );
   }
 }
