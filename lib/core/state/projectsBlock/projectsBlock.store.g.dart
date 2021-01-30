@@ -39,8 +39,34 @@ mixin _$ProjectsBlockStore on _ProjectsBlockStore, Store {
     });
   }
 
+  final _$projectListAtom = Atom(name: '_ProjectsBlockStore.projectList');
+
+  @override
+  List<Project> get projectList {
+    _$projectListAtom.reportRead();
+    return super.projectList;
+  }
+
+  @override
+  set projectList(List<Project> value) {
+    _$projectListAtom.reportWrite(value, super.projectList, () {
+      super.projectList = value;
+    });
+  }
+
   final _$_ProjectsBlockStoreActionController =
       ActionController(name: '_ProjectsBlockStore');
+
+  @override
+  void changeProjectList(List<Project> pL) {
+    final _$actionInfo = _$_ProjectsBlockStoreActionController.startAction(
+        name: '_ProjectsBlockStore.changeProjectList');
+    try {
+      return super.changeProjectList(pL);
+    } finally {
+      _$_ProjectsBlockStoreActionController.endAction(_$actionInfo);
+    }
+  }
 
   @override
   void changeTitle(String v) {
@@ -68,7 +94,8 @@ mixin _$ProjectsBlockStore on _ProjectsBlockStore, Store {
   String toString() {
     return '''
 title: ${title},
-context: ${context}
+context: ${context},
+projectList: ${projectList}
     ''';
   }
 }

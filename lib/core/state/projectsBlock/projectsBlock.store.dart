@@ -1,4 +1,5 @@
 import 'package:mobx/mobx.dart';
+import 'package:portfolio/models/project.dart';
 
 part 'projectsBlock.store.g.dart';
 
@@ -11,6 +12,12 @@ abstract class _ProjectsBlockStore with Store {
 
   @observable
   String context = '';
+
+  @observable
+  List<Project> projectList = [];
+
+  @action
+  void changeProjectList(List<Project> pL) => projectList = pL;
 
   @action
   void changeTitle(String v) => title = v;
