@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:portfolio/core/core.dart';
+import 'package:portfolio/utils/constants.dart';
 import 'package:portfolio/widgets/statsBox/local_widgets/languageDisplay.ui.dart';
 import 'package:provider/provider.dart';
 
@@ -29,11 +30,7 @@ class _ProjectDisplayState extends State<ProjectDisplay> {
               children: [
                 Text(
                   core.state.statsBoxStore.gitHubStars.name,
-                  style: TextStyle(
-                    fontFamily: "Inter_SemiBold",
-                    color: Colors.white,
-                    fontSize: 23,
-                  ),
+                  style: kBoxHeader,
                 ),
                 SizedBox(width: 15),
                 LanguageDisplay()
@@ -46,10 +43,7 @@ class _ProjectDisplayState extends State<ProjectDisplay> {
                     char: 66,
                   ) +
                   "...",
-              style: TextStyle(
-                color: Color(0xffD0D0D0),
-                fontFamily: "Inter_Medium",
-              ),
+              style: kBoxSubheader,
             ),
           ],
         ),

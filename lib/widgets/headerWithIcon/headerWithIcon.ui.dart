@@ -5,6 +5,7 @@ enum Emoji {
   openBook,
   keyboard,
   volt,
+  work,
 }
 
 class HeaderWithIcon extends StatelessWidget {

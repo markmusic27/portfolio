@@ -38,6 +38,22 @@ const kBody = TextStyle(
   height: 1.75,
 );
 
+const kBoxTeller = TextStyle(
+  color: Color(0xffD0D0D0),
+  fontFamily: 'Inter_Regular',
+);
+
+const kBoxHeader = TextStyle(
+  fontFamily: "Inter_SemiBold",
+  color: Colors.white,
+  fontSize: 23,
+);
+
+const kBoxSubheader = TextStyle(
+  color: Color(0xffD0D0D0),
+  fontFamily: "Inter_Medium",
+);
+
 // ICONS
 const kSpacingLowerBound = 0.0;
 const kSpacingUpperBound = 5.0;

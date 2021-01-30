@@ -3,6 +3,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:portfolio/core/core.dart';
 import 'package:portfolio/models/githubStars.dart';
 import 'package:portfolio/utils/constants.dart';
+import 'package:portfolio/widgets/card/card.ui.dart';
 import 'package:portfolio/widgets/statsBox/local_widgets/projectDisplay.ui.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -89,16 +90,10 @@ class _StatsBoxState extends State<StatsBox> with TickerProviderStateMixin {
             animate();
             core.state.statsBoxStore.reverseProp();
           },
-          child: Container(
-            width: double.infinity,
-            decoration: BoxDecoration(
-              color: core.state.statsBoxStore.accentColor.withOpacity(0.07),
-              border: Border.all(
-                color: core.state.statsBoxStore.accentColor,
-                width: 2,
-              ),
-              borderRadius: BorderRadius.circular(10),
-            ),
+          child: CardBox(
+            backgroundColor:
+                core.state.statsBoxStore.accentColor.withOpacity(0.07),
+            borderColor: core.state.statsBoxStore.accentColor,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -111,10 +106,7 @@ class _StatsBoxState extends State<StatsBox> with TickerProviderStateMixin {
                     children: [
                       Text(
                         'Last Starred GitHub Repository:',
-                        style: TextStyle(
-                          color: Color(0xffD0D0D0),
-                          fontFamily: 'Inter_Regular',
-                        ),
+                        style: kBoxTeller,
                       ),
                       ProjectDisplay(),
                     ],

@@ -34,7 +34,7 @@ class _ProgrammingState extends State<Programming> {
   Widget build(BuildContext context) {
     return Observer(
       builder: (_) => Container(
-        padding: EdgeInsets.only(top: 10),
+        padding: EdgeInsets.only(top: 10, bottom: 25),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
