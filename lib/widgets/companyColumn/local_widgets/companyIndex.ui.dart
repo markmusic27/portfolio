@@ -55,7 +55,6 @@ class _CompanyIndexState extends State<CompanyIndex>
 
   @override
   Widget build(BuildContext context) {
-    print(widget.company.imageAssetPath);
     return GestureDetector(
       onTap: () {
         launch(widget.company.url);

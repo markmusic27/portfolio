@@ -15,29 +15,6 @@ class StatsBox extends StatefulWidget {
 
 class _StatsBoxState extends State<StatsBox> with TickerProviderStateMixin {
   Core core;
-  AnimationController controller;
-  Animation animation;
-
-  void animate() {
-    controller = AnimationController(
-      duration: Duration(milliseconds: 100),
-      vsync: this,
-    );
-
-    if (core.state.statsBoxStore.onHover) {
-      animation = ColorTween(begin: kAccentColor, end: kGreyAccentColor)
-          .animate(controller);
-    } else {
-      animation = ColorTween(end: kAccentColor, begin: kGreyAccentColor)
-          .animate(controller);
-    }
-
-    controller.forward();
-
-    controller.addListener(() {
-      core.state.statsBoxStore.changeAccentColor(animation.value);
-    });
-  }
 
   void fetchAPI() async {
     Map<String, dynamic> response = await core.services.network.fetch(
@@ -76,45 +53,30 @@ class _StatsBoxState extends State<StatsBox> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return Observer(
-      builder: (_) => GestureDetector(
-        onTap: () {
-          launch(core.state.statsBoxStore.gitHubStars.url);
-        },
-        child: MouseRegion(
-          onEnter: (_) {
-            animate();
-            core.state.statsBoxStore.reverseProp();
-          },
-          onExit: (_) {
-            animate();
-            core.state.statsBoxStore.reverseProp();
-          },
-          child: CardBox(
-            backgroundColor:
-                core.state.statsBoxStore.accentColor.withOpacity(0.07),
-            borderColor: core.state.statsBoxStore.accentColor,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  height: 105,
-                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Last Starred GitHub Repository:',
-                        style: kBoxTeller,
-                      ),
-                      ProjectDisplay(),
-                    ],
+    return GestureDetector(
+      onTap: () {
+        launch(core.state.statsBoxStore.gitHubStars.url);
+      },
+      child: CardBox(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              height: 105,
+              padding: EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Last Starred GitHub Repository:',
+                    style: kBoxTeller,
                   ),
-                ),
-              ],
+                  ProjectDisplay(),
+                ],
+              ),
             ),
-          ),
+          ],
         ),
       ),
     );

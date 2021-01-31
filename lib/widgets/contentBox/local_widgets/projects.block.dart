@@ -27,6 +27,12 @@ class _ProjectsState extends State<Projects> {
     for (Map<String, dynamic> project in rawProjects) {
       core.state.projectsBlockStore.addProjectList(Project.fromJSON(project));
     }
+
+    for (Project project in core.state.projectsBlockStore.projectList) {
+      core.state.projectsBlockStore.addProject(
+        ProjectDisplay(project: project),
+      );
+    }
   }
 
   @override
@@ -53,8 +59,12 @@ class _ProjectsState extends State<Projects> {
               core.state.projectsBlockStore.context,
               style: kBody,
             ),
-            SizedBox(height: 10),
-            ProjectDisplay(),
+            SizedBox(height: 20),
+            Container(
+              child: Column(
+                children: core.state.projectsBlockStore.projects,
+              ),
+            ),
           ],
         ),
       ),

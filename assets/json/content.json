@@ -32,13 +32,15 @@
             {
                 "title": "Beam AI",
                 "description": "Empowering revolutionary energy optimization with Deep Learning and the power of IOT.",
-                "imageAssetPath": "assets/logos/beam.png",
+                "imageAssetPath": "assets/thumbnails/beam.png",
+                "logo": "assets/logos/beam.png",
                 "url": "https://website-7qxh9e77r.vercel.app/"
             },
             {
                 "title": "Mockups",
                 "description": "An online repository of 4k mockups.",
-                "imageAssetPath": "assets/logos/mockups.png",
+                "imageAssetPath": "assets/thumbnails/mockups.png",
+                "logo": "assets/logos/mockups.png",
                 "url": "https://mockups.li/"
             }
         ] 

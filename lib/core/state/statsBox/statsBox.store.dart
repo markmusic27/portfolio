@@ -10,12 +10,6 @@ class StatsBoxStore extends _StatsBoxStore with _$StatsBoxStore {}
 
 abstract class _StatsBoxStore with Store {
   @observable
-  bool onHover = false;
-
-  @observable
-  Color accentColor = kGreyAccentColor;
-
-  @observable
   Color languageColor = Colors.grey;
 
   @observable
@@ -25,12 +19,6 @@ abstract class _StatsBoxStore with Store {
     language: "fetching",
     url: "fetching",
   );
-
-  @action
-  void reverseProp() => onHover = !onHover;
-
-  @action
-  void changeAccentColor(Color c) => accentColor = c;
 
   @action
   void changeLanguageColor(Color c) => languageColor = c;

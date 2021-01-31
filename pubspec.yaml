@@ -57,6 +57,7 @@ flutter:
     - assets/gradients/
     - assets/images/
     - assets/emojis/
+    - assets/thumbnails/
     - assets/json/mediaData.json
     - assets/json/content.json
     - assets/json/code.json
@@ -118,3 +119,6 @@ flutter:
     - family: Twitter
       fonts:
         - asset: assets/icons/Twitter.ttf
+    - family: Link
+      fonts:
+        - asset: assets/icons/Link.ttf

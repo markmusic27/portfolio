@@ -1,5 +1,6 @@
 import 'package:mobx/mobx.dart';
 import 'package:portfolio/models/project.dart';
+import 'package:portfolio/widgets/projectDisplay/projectDisplay.ui.dart';
 
 part 'projectsBlock.store.g.dart';
 
@@ -15,6 +16,12 @@ abstract class _ProjectsBlockStore with Store {
 
   @observable
   List<Project> projectList = [];
+
+  @observable
+  List<ProjectDisplay> projects = [];
+
+  @action
+  void addProject(ProjectDisplay p) => projects.add(p);
 
   @action
   void addProjectList(Project project) => projectList.add(project);

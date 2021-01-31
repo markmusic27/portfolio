@@ -54,8 +54,34 @@ mixin _$ProjectsBlockStore on _ProjectsBlockStore, Store {
     });
   }
 
+  final _$projectsAtom = Atom(name: '_ProjectsBlockStore.projects');
+
+  @override
+  List<ProjectDisplay> get projects {
+    _$projectsAtom.reportRead();
+    return super.projects;
+  }
+
+  @override
+  set projects(List<ProjectDisplay> value) {
+    _$projectsAtom.reportWrite(value, super.projects, () {
+      super.projects = value;
+    });
+  }
+
   final _$_ProjectsBlockStoreActionController =
       ActionController(name: '_ProjectsBlockStore');
+
+  @override
+  void addProject(ProjectDisplay p) {
+    final _$actionInfo = _$_ProjectsBlockStoreActionController.startAction(
+        name: '_ProjectsBlockStore.addProject');
+    try {
+      return super.addProject(p);
+    } finally {
+      _$_ProjectsBlockStoreActionController.endAction(_$actionInfo);
+    }
+  }
 
   @override
   void addProjectList(Project project) {
@@ -95,7 +121,8 @@ mixin _$ProjectsBlockStore on _ProjectsBlockStore, Store {
     return '''
 title: ${title},
 context: ${context},
-projectList: ${projectList}
+projectList: ${projectList},
+projects: ${projects}
     ''';
   }
 }

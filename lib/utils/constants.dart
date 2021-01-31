@@ -5,6 +5,11 @@ const kBackgroundScaffoldColor = Colors.black;
 // Colors
 const kAccentColor = Color(0xff18A0FB);
 const kGreyAccentColor = Color(0xff444444);
+const kDarkGreyAccentColor = Color(0xff9B9B9B);
+
+// Animation Colors
+const kBoxActiveColorShadow = Color(0xff828282);
+const kBoxInactiveColorShadow = Colors.transparent;
 
 const kBackgroundScaffoldGradient = LinearGradient(
   begin: Alignment.topLeft,
