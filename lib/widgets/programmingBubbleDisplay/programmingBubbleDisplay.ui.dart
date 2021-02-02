@@ -6,8 +6,21 @@ class ProgrammingBubbleDisplay extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 300,
-      child: LanguageBubble(language: Language.cpp, size: 40),
+      child: Row(
+        children: [
+          LanguageBubble(language: PossibleLangs.dart),
+          SizedBox(width: 10),
+          LanguageBubble(language: PossibleLangs.python),
+          SizedBox(width: 10),
+          LanguageBubble(language: PossibleLangs.graphql),
+          SizedBox(width: 10),
+          LanguageBubble(language: PossibleLangs.cpp),
+          SizedBox(width: 10),
+          LanguageBubble(language: PossibleLangs.go),
+          SizedBox(width: 10),
+          LanguageBubble(language: PossibleLangs.typescript),
+        ],
+      ),
     );
   }
 }

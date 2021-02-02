@@ -1,26 +1,42 @@
 {
     "dart": {
-        "color": "#02589B"
+        "color": "#02589B",
+        "url": "https://github.com/markmusic2727?tab=repositories",
+        "name": "dart"
     },
     "cpp": {
-        "color": "#659AD2"
+        "color": "#659AD2",
+        "url": "https://github.com/markmusic2727?tab=repositories",
+        "name": "cpp"
     },
     "typescript": {
-        "color": "#3178C6"
+        "color": "#3178C6",
+        "url": "https://github.com/markmusic2727?tab=repositories",
+        "name": "typescript"
     },
     "postgresql": {
-        "color": "#336791"
+        "color": "#336791",
+        "url": "https://github.com/markmusic2727?tab=repositories",
+        "name": "postgresql"
     },
     "python": {
-        "color": "#FFD141"
+        "color": "#FFD141",
+        "url": "https://github.com/markmusic2727?tab=repositories",
+        "name": "python"
     },
     "go": {
-        "color": "#00ACD7"
+        "color": "#00ACD7",
+        "url": "https://github.com/markmusic2727?tab=repositories",
+        "name": "go"
     },
     "graphql": {
-        "color": "#E535AB"
+        "color": "#E535AB",
+        "url": "https://github.com/markmusic2727?tab=repositories",
+        "name": "graphql"
     },
     "java": {
-        "color": "#EC2025"
+        "color": "#EC2025",
+        "url": "https://github.com/markmusic2727?tab=repositories",
+        "name": "java"
     }
 }
