@@ -6,8 +6,8 @@ class BackgroundMultiGradient extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        GradientBox(color: Color(0xffA000E6).withOpacity(0.3)),
-        GradientBox(color: Color(0xffFE0058).withOpacity(0.3)),
+        GradientBox(color: Color(0xffA000E6).withOpacity(0.4)),
+        GradientBox(color: Color(0xffFE0058).withOpacity(0.4)),
       ],
     );
   }

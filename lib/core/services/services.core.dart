@@ -1,3 +1,4 @@
+import 'package:portfolio/core/services/conversion/conversion.services.dart';
 import 'package:portfolio/core/services/generateGradientImage/generateGradientImage.services.dart';
 import 'package:portfolio/core/services/limitCharacters/limitCharacters.services.dart';
 import 'package:portfolio/core/services/network/network.services.dart';
@@ -10,4 +11,5 @@ class Services {
   SerializeJSON serializeJSON = SerializeJSON();
   Network network = Network();
   LimitCharacters limitCharacters = LimitCharacters();
+  Conversion conversion = Conversion();
 }

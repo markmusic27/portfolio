@@ -34,14 +34,9 @@ class _StatsBoxState extends State<StatsBox> with TickerProviderStateMixin {
     String rawColor =
         data[core.state.statsBoxStore.gitHubStars.language]["color"];
 
-    core.state.statsBoxStore.changeLanguageColor(fromHex(rawColor));
-  }
-
-  Color fromHex(String hexString) {
-    final buffer = StringBuffer();
-    if (hexString.length == 6 || hexString.length == 7) buffer.write('ff');
-    buffer.write(hexString.replaceFirst('#', ''));
-    return Color(int.parse(buffer.toString(), radix: 16));
+    core.state.statsBoxStore.changeLanguageColor(
+      core.services.conversion.fromHexToColor(rawColor),
+    );
   }
 
   @override

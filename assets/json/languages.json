@@ -1,0 +1,26 @@
+{
+    "dart": {
+        "color": "#02589B"
+    },
+    "cpp": {
+        "color": "#659AD2"
+    },
+    "typescript": {
+        "color": "#3178C6"
+    },
+    "postgresql": {
+        "color": "#336791"
+    },
+    "python": {
+        "color": "#FFD141"
+    },
+    "go": {
+        "color": "#00ACD7"
+    },
+    "graphql": {
+        "color": "#E535AB"
+    },
+    "java": {
+        "color": "#EC2025"
+    }
+}

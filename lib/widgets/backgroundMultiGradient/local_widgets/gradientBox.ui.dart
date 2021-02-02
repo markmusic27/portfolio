@@ -9,7 +9,6 @@ class GradientBox extends StatelessWidget {
     return Expanded(
       child: Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30),
           boxShadow: [
             BoxShadow(
               color: color,

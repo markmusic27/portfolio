@@ -1,6 +1,7 @@
 import 'package:portfolio/core/state/companiesBlock/companiesBlock.store.dart';
 import 'package:portfolio/core/state/emailHover/emailHover.store.dart';
 import 'package:portfolio/core/state/githubHover/gitHubHover.store.dart';
+import 'package:portfolio/core/state/gradientContainer/gradientContainer.store.dart';
 import 'package:portfolio/core/state/iconHover/iconHover.store.dart';
 import 'package:portfolio/core/state/instagramHover/instagramHover.store.dart';
 import 'package:portfolio/core/state/linkedInHover/linkedInHover.store.dart';
@@ -15,6 +16,9 @@ import 'package:portfolio/core/state/twitterHover/twitterHover.store.dart';
 import 'package:portfolio/core/state/zyndicateCompany/zyndicateCompany.store.dart';
 
 class State {
+  // Greeting Box
+  GradientContainerStore gradientContainerStore = GradientContainerStore();
+
   // Profile Picture
   IconHoverStore iconHoverStore = IconHoverStore();
   ProfileHoverStore profileHoverStore = ProfileHoverStore();

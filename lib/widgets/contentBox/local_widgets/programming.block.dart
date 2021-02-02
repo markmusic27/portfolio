@@ -3,6 +3,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:portfolio/core/core.dart';
 import 'package:portfolio/utils/constants.dart';
 import 'package:portfolio/widgets/headerWithIcon/headerWithIcon.ui.dart';
+import 'package:portfolio/widgets/programmingBubbleDisplay/programmingBubbleDisplay.ui.dart';
 import 'package:portfolio/widgets/statsBox/statsBox.ui.dart';
 import 'package:provider/provider.dart';
 
@@ -47,6 +48,8 @@ class _ProgrammingState extends State<Programming> {
               core.state.programmingBlockStore.context,
               style: kBody,
             ),
+            SizedBox(height: 20),
+            ProgrammingBubbleDisplay(),
             SizedBox(height: 20),
             StatsBox()
           ],
