@@ -18,16 +18,20 @@ class _GradientContainerState extends State<GradientContainer> {
   Core core;
   VideoPlayerController controller;
 
+  Future<void> initPlayer() async {
+    controller = VideoPlayerController.asset("assets/banner/banner.mov");
+    await controller.initialize();
+    await controller.setLooping(true);
+    await controller.play();
+    core.state.gradientContainerStore.reverseProp();
+    core.state.generalStore.terminateLoading();
+    print("loaded");
+  }
+
   @override
   void initState() {
     core = Provider.of<Core>(context, listen: false);
-
-    controller = VideoPlayerController.asset("assets/banner/banner.mov");
-    controller.initialize().then((_) {
-      core.state.gradientContainerStore.reverseProp();
-      controller.setLooping(true);
-      controller.play();
-    });
+    initPlayer();
 
     super.initState();
   }

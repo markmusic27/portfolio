@@ -1,7 +1,7 @@
 {
     "dart": {
         "color": "#02589B",
-        "url": "https://github.com/markmusic2727?tab=repositories",
+        "url": "https://github.com/markmusic2727/portfolio",
         "name": "dart"
     },
     "cpp": {
@@ -16,22 +16,22 @@
     },
     "postgresql": {
         "color": "#336791",
-        "url": "https://github.com/markmusic2727?tab=repositories",
+        "url": "https://github.com/markmusic2727/graphql_flutter_intro",
         "name": "postgresql"
     },
     "python": {
         "color": "#FFD141",
-        "url": "https://github.com/markmusic2727?tab=repositories",
+        "url": "https://github.com/markmusic2727/gradient_descent_engine",
         "name": "python"
     },
     "go": {
         "color": "#00ACD7",
-        "url": "https://github.com/markmusic2727?tab=repositories",
+        "url": "https://github.com/markmusic2727/silicon-valley_api",
         "name": "go"
     },
     "graphql": {
         "color": "#E535AB",
-        "url": "https://github.com/markmusic2727?tab=repositories",
+        "url": "https://github.com/markmusic2727/graphql_flutter_intro",
         "name": "graphql"
     },
     "java": {

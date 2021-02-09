@@ -1,5 +1,6 @@
 import 'package:portfolio/core/state/companiesBlock/companiesBlock.store.dart';
 import 'package:portfolio/core/state/emailHover/emailHover.store.dart';
+import 'package:portfolio/core/state/general/general.store.dart';
 import 'package:portfolio/core/state/githubHover/gitHubHover.store.dart';
 import 'package:portfolio/core/state/gradientContainer/gradientContainer.store.dart';
 import 'package:portfolio/core/state/iconHover/iconHover.store.dart';
@@ -43,4 +44,7 @@ class State {
 
   //Programming Hovers
   StatsBoxStore statsBoxStore = StatsBoxStore();
+
+  // General State Props
+  GeneralStore generalStore = GeneralStore();
 }
